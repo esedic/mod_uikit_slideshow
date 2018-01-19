@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field name="main_image"
+           type="media"
+           preview="tooltip"
+           directory="images"
+           label="Main image"
+           description="This is the main image for this slide" />
+    <field name="title"
+           type="text"
+           default=""
+           label="Image title"
+           description="The title of the image" />
+    <field name="link"
+           type="url"
+           default=""
+           label="Image link"
+           description="The link of the image" />
+    <field name="target"
+           type="radio"
+           default="0"
+           label="Image link target"
+           description="Choose where the link points to">
+        <option value="0">Self</option>
+        <option value="1">Blank</option>
+    </field>
+    <field name="description"
+           type="textarea"
+           label="Image description"
+           description="The description text for the image (html)" />
+</form>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6.0" client="site" method="upgrade">
+    <name>Uikit 2 Slideshow Module</name>
+    <author>Elvis Sedić</author>
+    <creationDate>January 2018</creationDate>
+    <copyright>Copyright (C) 2018 Elvis Sedić. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>elvis@spletodrom.si</authorEmail>
+    <version>1.0.0</version>
+    <description>Slideshow module for Joomla 3.6+ based on Yootheme Uikit 2.</description>
+    <files>
+        <filename module="mod_uikit_slideshow">mod_uikit_slideshow.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="mod_uikit_slideshow" folder="media">
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>js</folder>
+    </media>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field 
+                  name="images" 
+                  type="subform"
+                  formsource="modules/mod_uikit_slideshow/subform.xml" 
+                  multiple="true"
+                  label="Slideshow images" 
+                  description="PLG_TINY_FIELD_TEMPLATE_FIELD_ELEMENTS_DESC"
+                />
+
+                <field name="myspacer"
+                       type="spacer"
+                       hr="true" />
+
+                <field name="autoplay"
+                       type="radio"
+                       class="btn-group btn-group-yesno radio"
+                       default="1"
+                       label="Autoplay"
+                       description="Defines whether or not the slideshow items should switch automatically">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="animation"
+                       type="list"
+                       default="fade"
+                       label="Animation"
+                       description="Defines the preferred transition between items">
+                    <option value="fade">Fade (default)</option>
+                    <option value="scroll">Scroll</option>
+                    <option value="scale">Scale</option>
+                    <option value="swipe">Swipe</option>
+                </field>
+                <field name="interval"
+                       type="text"
+                       default="3000"
+                       label="Interval"
+                       description="Defines the timespan between switching slideshow items" />
+
+                <field name="dotnav"
+                       type="radio"
+                       class="btn-group btn-group-yesno radio"
+                       default="1"
+                       label="Dot navigation"
+                       description="Turn on or off dot navigation.">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="slidenav"
+                       type="radio"
+                       class="btn-group btn-group-yesno radio"
+                       default="1"
+                       label="Previous/next buttons"
+                       description="Turn on or off navigation with previous and next buttons">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="pause"
+                       type="radio"
+                       class="btn-group btn-group-yesno radio"
+                       default="1"
+                       label="Pauses on hover?"
+                       description="Pause autoplay when hovering a slideshow">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="layout"
+                       type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field name="moduleclass_sfx"
+                       type="textarea" rows="3"
+                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field name="cache"
+                       type="list"
+                       default="1"
+                       label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time"
+                       type="text"
+                       default="900"
+                       label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode"
+                       type="hidden"
+                       default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
