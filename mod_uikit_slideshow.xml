@@ -10,6 +10,7 @@
     <description>Slideshow module for Joomla 3.6+ based on Yootheme Uikit 2.</description>
     <files>
         <filename module="mod_uikit_slideshow">mod_uikit_slideshow.php</filename>
+        <filename>subform.xml</filename>
         <folder>tmpl</folder>
     </files>
     <media destination="mod_uikit_slideshow" folder="media">
